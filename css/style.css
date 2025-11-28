@@ -1,0 +1,390 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display:flex;
+    min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background-color: #23242b;
+    width: 260px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.header .branding {
+    display: flex;               /* Membuat icon + teks sejajar */
+    align-items: center;         /* Posisi vertikal rata tengah */
+    gap: 10px;                   /* Jarak antara icon dan teks */
+    margin-bottom: 20px;
+}
+
+.description-header {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+}
+
+/* AREA DAFTAR MENU */
+.header {
+    margin-bottom: 0;
+}
+
+.salam {
+    color: #111;
+}
+
+.ques {
+    color: #111;
+    margin-top: 10x;
+}
+
+.goals {
+    color: #111;
+    margin-top: 10px;
+}
+
+.tentang {
+    color: #111;
+}
+/* item dalam list menu (HOME / ABOUT / CONTACT) */
+.list-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* icon menu */
+.icon {
+    font-size: 20px;
+    color: white;
+    margin-right: 15px;
+}
+
+.list-item {
+    font-size: 16px;
+    color: white;
+
+}
+/* teks menu */
+.description {
+    font-size: 16px;
+    color: white;
+}
+
+.list-item a:hover {
+    background:#555a56;
+    transition:0.2s;
+}
+
+/* ===== MAIN CONTENT (HALAMAN TENGAH) ===== */
+.main-content {
+    background:#929a91;
+    flex-grow: 1;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#home {
+    max-width: 900px;      /* lebar konten agar tidak melebar ke ujung */
+    margin: 10px;        /* agar posisinya rata tengah */
+    line-height: 1.6;      /* jarak antar baris biar enak dibaca */
+    padding: 20px;         /* ruang dalam */
+    color: white;
+}
+
+#home h1 {
+    margin-top: 20px;
+}
+
+#home ul {
+    margin-left: 25px;     /* merapikan bullet list */
+}
+
+#home .home-box {
+    width: 100%;           /* menyesuaikan max-width container */
+}
+
+/* === CONTACT FORM STYLE === */
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 80%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+/* ===== ABOUT STYLE ===== */
+#about {
+    padding: 15px;
+}
+
+.about-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #d6d8d5;
+    padding: 18px;
+    border-radius: 10px;
+    width: 75%;
+}
+
+.about-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #bdbdbd;
+}
+
+/* ====== STYLE SECTION ABOUT ====== */
+
+#about {
+    padding: 50px;
+    display: block;
+    color: white;
+}
+
+#about h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* BOX UTAMA */
+.about-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #e7ebea;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin-top: 30px;
+    color: black;
+}
+
+/* FOTO */
+.about-img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* TEKS BIO */
+.bio {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.bio h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.bio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bio ul li {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid #2d2e34;
+    background-color: #e8e8e8;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.btn-kirim {
+    background-color: #23242b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.btn-kirim:hover {
+    background-color: #444a46;
+    transition: .2s;
+}
+
+.sidebar a {
+    color: white;         /* warna teks default */
+}
+
+.sidebar a:visited {
+    color: white;         /* agar setelah dikunjungi tetap putih */
+}
+
+.sidebar a:hover {
+    color: white;         /* agar hover tidak berubah warna */
+}
+/* =========== FOOTER =========== */
+.footer{
+    width:100%;
+    text-align:center;
+    padding:20px 10px;
+    background:#111;
+    color:white;
+    font-size:14px;
+    margin-top:0;
+    border-top:2px solid rgba(255,255,255,.1);
+}
+
+.footer-sosmed{
+    margin-top:8px;
+}
+
+.footer-sosmed a{
+    margin:0 10px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.footer-sosmed a:hover{
+    color:#00c8ff;
+    text-shadow:0 0 10px #00c8ff;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 768px) {
+
+    /* Tombol Menu Muncul */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+        background: #23242b;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+
+    /* Container jadi kolom */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Sidebar jadi Slide Menu */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        height: 100vh;
+        width: 240px;
+        transition: 0.3s;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    /* Sidebar aktif */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Isi halaman turun ke bawah */
+    .main-content {
+        margin-top: 0;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Gambar sidebar menyesuaikan */
+    .illustration img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* HOME */
+    #home {
+        margin: 0;
+        padding: 10px;
+        color: white;
+    }
+
+    /* ABOUT */
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .about-img {
+        width: 150px;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    /* CONTACT */
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
