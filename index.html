@@ -4,24 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css">
-<title>Portfolio</title>
+<title>Portfolio & Inventory System</title>
 </head>
 <body>
 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 <div class="container">
 
-    <!-- SIDEBAR tetap -->
-     <div class="sidebar" id="sidebar">
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
         <div class="header">
             <img src="assets/img/logo-19-12-tanpa-bayang-1-300x300.png" height="30" width="30" class="icon">
             <span class="description-header">FAHREZI LUTHFI</span>
         </div>
 
         <div class="illustration">
-                <img src="assets/img/—Pngtree—programming and web technology vector_4089305.png" height="200">
-            </div>
+            <img src="assets/img/—Pngtree—programming and web technology vector_4089305.png" height="200">
+        </div>
 
         <div class="main">
+            <!-- MENU PORTFOLIO -->
+            <div class="menu-section-title">PORTFOLIO</div>
             <div class="list-item"><a href="#" onclick="showPage('home'); closeMenu()"> 
                 <img src="assets/img/pngwing.com (10).png" height="30" class="icon">
                 <span>Home</span></a></div>
@@ -29,113 +31,1638 @@
                 <img src="assets/img/pngwing.com (12).png" height="25" class="icon">
                 <span>About</span></a></div>
             <div class="list-item"><a href="#" onclick="showPage('contact'); closeMenu()">
-                 <img src="assets/img/pngwing.com (13).png" height="25" class="icon">
+                <img src="assets/img/pngwing.com (13).png" height="25" class="icon">
                 <span>Contact</span></a></div>
+
+            <!-- MENU INVENTORY SYSTEM -->
+            <div class="menu-section-title">INVENTORY SYSTEM</div>
+            <div class="list-item"><a href="#" onclick="showPage('dashboard'); closeMenu()">
+                <span>🏠 Dashboard</span></a></div>
+
+            <div class="menu-section-subtitle">Master Data</div>
+            <div class="list-item"><a href="#" onclick="showPage('barang'); closeMenu()">
+                <span>📦 Master Barang</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('gudang'); closeMenu()">
+                <span>🏭 Master Gudang</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('harga'); closeMenu()">
+                <span>💰 Master Harga</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('karyawan'); closeMenu()">
+                <span>👥 Master Karyawan</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('kategori'); closeMenu()">
+                <span>🏷️ Master Kategori</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('pelanggan'); closeMenu()">
+                <span>👤 Master Pelanggan</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('satuan'); closeMenu()">
+                <span>📏 Master Satuan</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('supplier'); closeMenu()">
+                <span>🚚 Master Supplier</span></a></div>
+
+            <div class="menu-section-subtitle">Transaksi</div>
+            <div class="list-item"><a href="#" onclick="showPage('pembelian'); closeMenu()">
+                <span>🛒 Transaksi Pembelian</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('penjualan'); closeMenu()">
+                <span>💳 Transaksi Penjualan</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('retur-pembelian'); closeMenu()">
+                <span>↩️ Retur Pembelian</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('retur-penjualan'); closeMenu()">
+                <span>🔄 Retur Penjualan</span></a></div>
+            <div class="list-item"><a href="#" onclick="showPage('stok-opname'); closeMenu()">
+                <span>📊 Stok Opname</span></a></div>
         </div>
     </div>
 
-    <!-- MAIN AREA (INI YG BERUBAH HALAMAN) -->
+    <!-- MAIN AREA -->
     <div class="main-content">
 
+        <!-- HOME PAGE -->
         <section id="home" class="page">
+            <h1 class="salam">Selamat Datang</h1>
+            <p class="home-intro">
+                Halo! Saya <b>Fahrezi Luthfi</b>, seorang pelajar/mahasiswa yang sedang mendalami dunia 
+                pemrograman khususnya pada bidang <b>web development</b>. Website ini saya buat sebagai media 
+                untuk menampilkan profil, kemampuan, serta sebagai tempat untuk belajar dan berproses menjadi
+                lebih baik dari hari ke hari.
+            </p>
 
-    <h1 class="salam">
-        Selamat Datang
-    </h1>
-    <p class="home-intro">
+            <p class="home-intro">
+                Di dalam website ini, kamu dapat melihat beberapa informasi mengenai diri saya melalui 
+                halaman <b>About</b>, serta kamu juga dapat mengirim pesan atau bertanya mengenai project yang 
+                sedang atau akan saya kerjakan melalui halaman <b>Contact</b>. Saya percaya bahwa belajar 
+                tidak pernah ada batasnya, dan setiap langkah kecil akan membawa saya menuju tujuan besar.
+            </p>
 
-        Halo! Saya <b>Fahrezi Luthfi</b>, seorang pelajar/mahasiswa yang sedang mendalami dunia 
-        pemrograman khususnya pada bidang <b>web development</b>. Website ini saya buat sebagai media 
-        untuk menampilkan profil, kemampuan, serta sebagai tempat untuk belajar dan berproses menjadi
-        lebih baik dari hari ke hari.
-    </p>
+            <div class="home-box">
+                <h3 class="ques">Apa yang saya pelajari?</h3>
+                <ul>
+                    <li>HTML – struktur dasar website</li>
+                    <li>CSS – mengatur tampilan agar menarik</li>
+                    <li>JavaScript – membuat website lebih hidup</li>
+                    <li>UI Design dasar – tata letak & visual</li>
+                </ul>
+            </div>
 
-    <p class="home-intro">
-        Di dalam website ini, kamu dapat melihat beberapa informasi mengenai diri saya melalui 
-        halaman <b>About</b>, serta kamu juga dapat mengirim pesan atau bertanya mengenai project yang 
-        sedang atau akan saya kerjakan melalui halaman <b>Contact</b>. Saya percaya bahwa belajar 
-        tidak pernah ada batasnya, dan setiap langkah kecil akan membawa saya menuju tujuan besar.
-    </p>
+            <div class="home-box">
+                <h3 class="goals">Goals Saya</h3>
+                <p>
+                    Saya ingin terus meningkatkan skill dalam pengembangan website, membuat tampilan yang 
+                    modern, responsif, dan nyaman untuk digunakan. Ke depannya, saya berencana mempelajari 
+                    framework seperti <b>React</b> atau <b>Tailwind</b> agar website yang saya bangun lebih cepat dan efisien.
+                </p>
+            </div>
+        </section>
 
-    <div class="home-box">
-        <h3 class="ques">
-            Apa yang saya pelajari?
-        </h3>
-        <ul>
-            <li> HTML — struktur dasar website</li>
-            <li> CSS — mengatur tampilan agar menarik</li>
-            <li> JavaScript — membuat website lebih hidup</li>
-            <li> UI Design dasar — tata letak & visual</li>
-        </ul>
+        <!-- ABOUT PAGE -->
+        <section id="about" class="page hidden">
+            <h1 class="tentang">Tentang Saya</h1>
+            <p class="about-text">
+                Perkenalkan, saya <b>Luthfi Ahmad Fahrezi</b>. Saya seorang pelajar/mahasiswa yang sedang mendalami 
+                dunia <b>pemrograman web</b> dan teknologi. Saya sangat tertarik dalam membuat tampilan web 
+                yang modern, responsive, dan mudah digunakan.
+            </p>
+
+            <div class="about-box">
+                <img src="assets/img/Gambar WhatsApp 2025-11-03 pukul 11.58.11_812210f1.jpg" alt="Foto Profil" class="about-img">
+                
+                <div class="bio">
+                    <h3>Informasi Singkat:</h3>
+                    <ul>
+                        <li>📍 Domisili : Banjarmasin, Kalimantan Selatan, Indonesia</li>
+                        <li>💻 Instagram : @lutpee.e</li>
+                        <li>🎯 Email : fahrezillutfi1@gmail.com</li>
+                        <li>📚 Hobi : Coding, desain, belajar teknologi</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact" class="page hidden">
+            <h1>Hubungi Saya 📩</h1>
+            <p>Silahkan kirim pesan Anda melalui form di bawah ini.</p>
+
+            <form action="#" class="contact-form">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" placeholder="Masukkan nama anda.." required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Alamat email aktif.." required>
+
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" rows="5" placeholder="Tulis pesan disini..." required></textarea>
+
+                <button type="submit" class="btn-kirim">Kirim Pesan</button>
+            </form>
+        </section>
+
+        <!-- DASHBOARD INVENTORY -->
+        <section id="dashboard" class="page hidden inventory-page">
+            <div class="page-header">
+                <h1>Dashboard Inventory</h1>
+                <p>Ringkasan informasi sistem inventory perusahaan</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Barang</h3>
+                    <div class="stat-value">1,245</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Pelanggan</h3>
+                    <div class="stat-value">328</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Supplier</h3>
+                    <div class="stat-value">56</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Transaksi Hari Ini</h3>
+                    <div class="stat-value">89</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 15px;">Aktivitas Terakhir</h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Waktu</th>
+                                <th>Aktivitas</th>
+                                <th>User</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10:30</td>
+                                <td>Transaksi Penjualan #INV-001</td>
+                                <td>Admin</td>
+                                <td><span class="badge badge-success">Selesai</span></td>
+                            </tr>
+                            <tr>
+                                <td>10:15</td>
+                                <td>Tambah Barang Baru</td>
+                                <td>Staff Gudang</td>
+                                <td><span class="badge badge-success">Selesai</span></td>
+                            </tr>
+                            <tr>
+                                <td>09:45</td>
+                                <td>Stok Opname Gudang A</td>
+                                <td>Manager</td>
+                                <td><span class="badge badge-warning">Proses</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- MASTER BARANG -->
+        <section id="barang" class="page hidden inventory-page">
+            <div class="page-header">
+                <h1>Master Barang</h1>
+                <p>Kelola data barang perusahaan</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Daftar Barang</h3>
+                    <button class="btn btn-primary" onclick="showPage('barang-form')">➕ Tambah Barang</button>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari nama barang, kode, atau kategori..." class="search-input">
+                    <button class="btn btn-primary">🔍 Cari</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kode Barang</th>
+                                <th>Nama Barang</th>
+                                <th>Kategori</th>
+                                <th>Satuan</th>
+                                <th>Stok</th>
+                                <th>Harga</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BRG-001</td>
+                                <td>Beras Premium 5kg</td>
+                                <td>Sembako</td>
+                                <td>Pcs</td>
+                                <td>150</td>
+                                <td>Rp 75.000</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BRG-002</td>
+                                <td>Gula Pasir 1kg</td>
+                                <td>Sembako</td>
+                                <td>Kg</td>
+                                <td>200</td>
+                                <td>Rp 15.000</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BRG-003</td>
+                                <td>Minyak Goreng 2L</td>
+                                <td>Sembako</td>
+                                <td>Liter</td>
+                                <td>120</td>
+                                <td>Rp 32.000</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM TAMBAH BARANG -->
+<section id="barang-form" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Tambah Data Barang</h1>
+        <p>Masukkan informasi barang baru</p>
     </div>
 
-    <div class="home-box">
-        <h3 class="goals">
-            Goals Saya
-        </h3>
-        <p>
-            Saya ingin terus meningkatkan skill dalam pengembangan website, membuat tampilan yang 
-            modern, responsif, dan nyaman untuk digunakan. Ke depannya, saya berencana mempelajari 
-            framework seperti <b>React</b> atau <b>Tailwind</b> agar website yang saya bangun lebih cepat dan efisien.
-        </p>
-    </div>
+    <div class="card">
+        <form id="formBarang" class="inventory-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kode Barang *</label>
+                    <input type="text" id="kodeBarang" class="form-control" required placeholder="BRG-001">
+                </div>
+                <div class="form-group">
+                    <label>Nama Barang *</label>
+                    <input type="text" id="namaBarang" class="form-control" required placeholder="Masukkan nama barang">
+                </div>
+            </div>
 
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kategori *</label>
+                    <select id="kategoriBarang" class="form-control" required>
+                        <option value="">Pilih Kategori</option>
+                        <option>Sembako</option>
+                        <option>Elektronik</option>
+                        <option>Pakaian</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Satuan *</label>
+                    <select id="satuanBarang" class="form-control" required>
+                        <option value="">Pilih Satuan</option>
+                        <option>Pcs</option>
+                        <option>Kg</option>
+                        <option>Liter</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Stok Awal *</label>
+                    <input type="number" id="stokBarang" class="form-control" required placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Harga *</label>
+                    <input type="number" id="hargaBarang" class="form-control" required placeholder="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Deskripsi</label>
+                <textarea id="deskripsiBarang" class="form-control" rows="4" placeholder="Deskripsi barang (opsional)"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('barang')">❌ Batal</button>
+            </div>
+        </form>
+    </div>
 </section>
 
 
-<section id="about" class="page hidden">
-    <h1 class="tentang">
-        Tentang Saya
-    </h1>
-    <p class="about-text">
-        Perkenalkan, saya <b>Luthfi Ahmad Fahrezi</b>. Saya seorang pelajar/mahasiswa yang sedang mendalami 
-        dunia <b>pemrograman web</b> dan teknologi. Saya sangat tertarik dalam membuat tampilan web 
-        yang modern, responsive, dan mudah digunakan.
-    </p>
+<!-- MASTER GUDANG -->
+<section id="gudang" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Master Gudang</h1>
+        <p>Kelola data gudang perusahaan</p>
+    </div>
 
-    <div class="about-box">
-        <img src="assets/img/Gambar WhatsApp 2025-11-03 pukul 11.58.11_812210f1.jpg" alt="Foto Profil" class="about-img"> <!-- jika tidak ada boleh dihapus -->
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Gudang</h3>
+            <button class="btn btn-primary" onclick="showPage('gudang-form')">➕ Tambah Gudang</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Kode Gudang</th>
+                        <th>Nama Gudang</th>
+                        <th>Lokasi</th>
+                        <th>Kapasitas</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GD-001</td>
+                        <td>Gudang Utama</td>
+                        <td>Jakarta Pusat</td>
+                        <td>5000 m²</td>
+                        <td><span class="badge badge-success">Aktif</span></td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GD-002</td>
+                        <td>Gudang Cabang A</td>
+                        <td>Jakarta Selatan</td>
+                        <td>3000 m²</td>
+                        <td><span class="badge badge-success">Aktif</span></td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- FORM TAMBAH GUDANG -->
+<section id="gudang-form" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Tambah Data Gudang</h1>
+        <p>Masukkan informasi gudang baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formGudang" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kode Gudang *</label>
+                    <input type="text" id="kodeGudang" class="form-control" placeholder="GD-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Gudang *</label>
+                    <input type="text" id="namaGudang" class="form-control" placeholder="Masukkan nama gudang" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Lokasi *</label>
+                    <input type="text" id="lokasiGudang" class="form-control" placeholder="Alamat / Kota" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Kapasitas *</label>
+                    <input type="text" id="kapasitasGudang" class="form-control" placeholder="5000 m²" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusGudang" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('gudang')">❌ Batal</button>
+            </div>
+        </form>
+    </div>
+</section>
+
         
-        <div class="bio">
-            <h3>Informasi Singkat:</h3>
-            <ul>
-                <li>📍 Domisili : Banjarmasin, Kalimantan Selatan, Indonesia</li>
-                <li>💻 Instagram : @lutpee.e</li>
-                <li>🎯 Email : fahrezillutfi1@gmail.com</li>
-                <li>📚 Hobi : Coding, desain, belajar teknologi</li>
-            </ul>
+
+       <!-- MASTER HARGA -->
+<section id="harga" class="page hidden inventory-page">
+
+    <!-- LIST HARGA -->
+    <div class="page-header">
+        <h1>Master Harga</h1>
+        <p>Kelola daftar harga barang</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Harga</h3>
+            <button class="btn btn-primary" onclick="showPage('harga-form')">➕ Tambah Harga</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Kode Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Harga Beli</th>
+                        <th>Harga Jual</th>
+                        <th>Margin</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>BRG-001</td>
+                        <td>Beras Premium 5kg</td>
+                        <td>Rp 68.000</td>
+                        <td>Rp 75.000</td>
+                        <td>10%</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>BRG-002</td>
+                        <td>Gula Pasir 1kg</td>
+                        <td>Rp 13.500</td>
+                        <td>Rp 15.000</td>
+                        <td>11%</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
         </div>
     </div>
 </section>
 
-<section id="contact" class="page hidden">
-    <h1>Hubungi Saya 📩</h1>
-    <p>Silahkan kirim pesan Anda melalui form di bawah ini.</p>
 
-    <form action="#" class="contact-form">
-        <label for="nama">Nama</label>
-        <input type="text" id="nama" placeholder="Masukkan nama anda.." required>
+<!-- FORM TAMBAH HARGA -->
+<section id="harga-form" class="page hidden inventory-page">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Alamat email aktif.." required>
+    <div class="page-header">
+        <h1>Tambah Data Harga</h1>
+        <p>Masukkan informasi harga produk</p>
+    </div>
 
-        <label for="pesan">Pesan</label>
-        <textarea id="pesan" rows="5" placeholder="Tulis pesan disini..." required></textarea>
+    <div class="card">
+        <form id="formHarga" class="inventory-form">
 
-        <button type="submit" class="btn-kirim">Kirim Pesan</button>
-    </form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kode Barang *</label>
+                    <input type="text" id="kodeBarangHarga" class="form-control" placeholder="BRG-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Barang *</label>
+                    <input type="text" id="namaBarangHarga" class="form-control" placeholder="Nama barang" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Harga Beli *</label>
+                    <input type="number" id="hargaBeli" class="form-control" placeholder="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Harga Jual *</label>
+                    <input type="number" id="hargaJual" class="form-control" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Satuan *</label>
+                    <select id="satuanHarga" class="form-control" required>
+                        <option value="">Pilih Satuan</option>
+                        <option>PCS</option>
+                        <option>Pack</option>
+                        <option>Box</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusHarga" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('harga')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
 </section>
 
+
+     <!-- MASTER KARYAWAN -->
+<section id="karyawan" class="page hidden inventory-page">
+
+    <div class="page-header">
+        <h1>Master Karyawan</h1>
+        <p>Kelola daftar karyawan perusahaan</p>
     </div>
-</div>
-<footer class="footer">
-    <p>© 2025 Fahrezi Luthfi | Portfolio Website</p>
-    <div class="footer-sosmed">
-        <a href="https://instagram.com/lutpee.e" target="_blank">Instagram</a>
-        <a href="mailto:fahrezillutfi1@gmail.com" target="_blank">Email</a>
-        <a href="#" onclick="showPage('contact')">Contact</a>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Karyawan</h3>
+            <button class="btn btn-primary" onclick="showPage('karyawan-form')">➕ Tambah Karyawan</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID Karyawan</th>
+                        <th>Nama</th>
+                        <th>Jabatan</th>
+                        <th>No. Telp</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>KR-001</td>
+                        <td>Agus Saputra</td>
+                        <td>Admin Gudang</td>
+                        <td>0812-3456-7890</td>
+                        <td><span class="badge badge-success">Aktif</span></td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>KR-002</td>
+                        <td>Dewi Lestari</td>
+                        <td>Kasir</td>
+                        <td>0813-7777-2211</td>
+                        <td><span class="badge badge-success">Aktif</span></td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
     </div>
-</footer>
+</section>
+
+
+<!-- FORM TAMBAH KARYAWAN -->
+<section id="karyawan-form" class="page hidden inventory-page">
+
+    <div class="page-header">
+        <h1>Tambah Data Karyawan</h1>
+        <p>Masukkan informasi karyawan baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formKaryawan" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>ID Karyawan *</label>
+                    <input type="text" id="idKaryawan" class="form-control" placeholder="KR-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Lengkap *</label>
+                    <input type="text" id="namaKaryawan" class="form-control" placeholder="Nama lengkap" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Jabatan *</label>
+                    <select id="jabatanKaryawan" class="form-control" required>
+                        <option value="">Pilih Jabatan</option>
+                        <option>Admin</option>
+                        <option>Kasir</option>
+                        <option>Gudang</option>
+                        <option>Supervisor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>No. Telepon *</label>
+                    <input type="text" id="telpKaryawan" class="form-control" placeholder="0812-xxxx-xxxx" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusKaryawan" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('karyawan')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+        <!-- MASTER KATEGORI -->
+        <section id="kategori" class="page hidden inventory-page">
+            
+            <div class="page-header">
+                <h1>Master Kategori</h1>
+                <p>Kelola kategori barang</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Daftar Kategori</h3>
+                    <button class="btn btn-primary" onclick="showPage('kategori-form')">➕ Tambah Kategori</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kode Kategori</th>
+                                <th>Nama Kategori</th>
+                                <th>Deskripsi</th>
+                                <th>Jumlah Barang</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>KAT-001</td>
+                                <td>Sembako</td>
+                                <td>Bahan makanan pokok</td>
+                                <td>45 item</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>KAT-002</td>
+                                <td>Elektronik</td>
+                                <td>Perangkat elektronik</td>
+                                <td>28 item</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM TAMBAH KATEGORI -->
+<section id="kategori-form" class="page hidden inventory-page">
+
+    <div class="page-header">
+        <h1>Tambah Kategori Barang</h1>
+        <p>Masukkan informasi kategori baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formKategori" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kode Kategori *</label>
+                    <input type="text" id="kodeKategori" class="form-control" placeholder="KAT-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Kategori *</label>
+                    <input type="text" id="namaKategori" class="form-control" placeholder="Nama kategori" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Deskripsi *</label>
+                    <input type="text" id="deskripsiKategori" class="form-control" placeholder="Deskripsi kategori" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusKategori" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('kategori')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+        <!-- MASTER PELANGGAN -->
+        <section id="pelanggan" class="page hidden inventory-page">
+            <div class="page-header">
+                <h1>Master Pelanggan</h1>
+                <p>Kelola data pelanggan</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Daftar Pelanggan</h3>
+                    <button class="btn btn-primary" onclick="showPage('pelanggan-form')">➕ Tambah Pelanggan</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID Pelanggan</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>No. Telp</th>
+                                <th>Email</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PLG-001</td>
+                                <td>Andi Pratama</td>
+                                <td>Jakarta</td>
+                                <td>0812-1111-2222</td>
+                                <td>andi@email.com</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PLG-002</td>
+                                <td>Budi Santoso</td>
+                                <td>Bandung</td>
+                                <td>0813-2222-3333</td>
+                                <td>budi@email.com</td>
+                                <td>
+                                    <button class="btn-action btn-edit">✏️</button>
+                                    <button class="btn-action btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- FORM TAMBAH PELANGGAN -->
+<section id="pelanggan-form" class="page hidden inventory-page">
+
+    <div class="page-header">
+        <h1>Tambah Data Pelanggan</h1>
+        <p>Masukkan informasi pelanggan baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formPelanggan" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kode Pelanggan *</label>
+                    <input type="text" id="kodePelanggan" class="form-control" placeholder="PLG-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Pelanggan *</label>
+                    <input type="text" id="namaPelanggan" class="form-control" placeholder="Nama lengkap" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>No. Telepon *</label>
+                    <input type="text" id="telpPelanggan" class="form-control" placeholder="0812-xxxx-xxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusPelanggan" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Alamat *</label>
+                <textarea id="alamatPelanggan" class="form-control" rows="3" placeholder="Alamat lengkap" required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('pelanggan')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+       <!-- MASTER SATUAN -->
+<section id="satuan" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Master Satuan</h1>
+        <p>Kelola satuan barang</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Satuan</h3>
+            <button class="btn btn-primary" onclick="showPage('satuan-form')">➕ Tambah Satuan</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Kode Satuan</th>
+                        <th>Nama Satuan</th>
+                        <th>Deskripsi</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SAT-001</td>
+                        <td>Pcs</td>
+                        <td>Pieces / Buah</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SAT-002</td>
+                        <td>Kg</td>
+                        <td>Kilogram</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SAT-003</td>
+                        <td>Liter</td>
+                        <td>Liter</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<!-- FORM TAMBAH SATUAN -->
+<section id="satuan-form" class="page hidden inventory-page">
+
+    <div class="page-header">
+        <h1>Tambah Satuan Barang</h1>
+        <p>Masukkan informasi satuan baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formSatuan" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Kode Satuan *</label>
+                    <input type="text" id="kodeSatuan" class="form-control" placeholder="SAT-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Satuan *</label>
+                    <input type="text" id="namaSatuan" class="form-control" placeholder="Contoh: Pcs, Kg, Liter" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Deskripsi *</label>
+                    <input type="text" id="deskripsiSatuan" class="form-control" placeholder="Deskripsi satuan" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusSatuan" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('satuan')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+        
+        <!-- MASTER SUPPLIER -->
+<section id="supplier" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Master Supplier</h1>
+        <p>Kelola data supplier</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Supplier</h3>
+            <button class="btn btn-primary" onclick="showPage('supplier-form')">➕ Tambah Supplier</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID Supplier</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>No. Telp</th>
+                        <th>Email</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SPL-001</td>
+                        <td>Andi Pratama</td>
+                        <td>Jakarta</td>
+                        <td>0812-1111-2222</td>
+                        <td>andi@email.com</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SPL-002</td>
+                        <td>Budi Santoso</td>
+                        <td>Bandung</td>
+                        <td>0813-2222-3333</td>
+                        <td>budi@email.com</td>
+                        <td>
+                            <button class="btn-action btn-edit">✏️</button>
+                            <button class="btn-action btn-delete">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<!-- FORM TAMBAH SUPPLIER -->
+<section id="supplier-form" class="page hidden inventory-page">
+
+    <div class="page-header">
+        <h1>Tambah Supplier</h1>
+        <p>Masukkan informasi supplier baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formSupplier" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>ID Supplier *</label>
+                    <input type="text" id="idSupplier" class="form-control" placeholder="SPL-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Supplier *</label>
+                    <input type="text" id="namaSupplier" class="form-control" placeholder="Nama supplier" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Alamat *</label>
+                    <input type="text" id="alamatSupplier" class="form-control" placeholder="Alamat lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label>No. Telepon *</label>
+                    <input type="text" id="telpSupplier" class="form-control" placeholder="0812-xxxx-xxxx" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="emailSupplier" class="form-control" placeholder="email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusSupplier" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('supplier')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+        <!-- TRANSAKSI PEMBELIAN -->
+<section id="pembelian" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Transaksi Pembelian</h1>
+        <p>Kelola transaksi pembelian dari supplier</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Pembelian</h3>
+            <button class="btn btn-primary"onclick="showPage('form-pembelian')">➕ Tambah Pembelian</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Faktur</th>
+                        <th>Tanggal</th>
+                        <th>Supplier</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PB-001</td>
+                        <td>2025-01-10</td>
+                        <td>PT Maju Bersama</td>
+                        <td>Rp 5.200.000</td>
+                        <td><span class="badge badge-success">Selesai</span></td>
+                        <td><button class="btn-action btn-edit">👁️ Detail</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- FORM TAMBAH PEMBELIAN -->
+<section id="form-pembelian" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Tambah Transaksi Pembelian</h1>
+        <p>Input pembelian barang dari supplier</p>
+    </div>
+
+    <div class="card form-card">
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>No. Faktur</label>
+                    <input type="text" placeholder="Masukkan nomor faktur...">
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Supplier</label>
+                    <select>
+                        <option>Pilih Supplier</option>
+                        <option>PT Maju Bersama</option>
+                        <option>PT Sentosa Abadi</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3>Detail Barang</h3>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Barang</th>
+                        <th>Qty</th>
+                        <th>Harga Beli</th>
+                        <th>Subtotal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="pembelian-detail-body">
+                    <tr>
+                        <td>
+                            <select>
+                                <option>Pilih Barang</option>
+                                <option>Beras Premium</option>
+                                <option>Gula Pasir</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" value="1"></td>
+                        <td><input type="number" min="0" value="0"></td>
+                        <td>Rp 0</td>
+                        <td><button type="button" class="btn-action btn-delete">🗑️</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" class="btn btn-secondary" style="margin-top: 10px;">➕ Tambah Baris</button>
+
+            <div class="form-row" style="margin-top: 20px;">
+                <div class="form-group">
+                    <label>Total</label>
+                    <input type="text" value="Rp 0" readonly>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary">💾 Simpan Pembelian</button>
+                <button type="button" class="btn btn-danger">❌ Batal</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- TRANSAKSI PENJUALAN -->
+<section id="penjualan" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Transaksi Penjualan</h1>
+        <p>Kelola penjualan kepada pelanggan</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Penjualan</h3>
+            <button class="btn btn-primary" onclick="showPage('penjualan-form')">➕ Tambah Penjualan</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Invoice</th>
+                        <th>Tanggal</th>
+                        <th>Pelanggan</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INV-001</td>
+                        <td>2025-01-12</td>
+                        <td>Andi Pratama</td>
+                        <td>Rp 1.050.000</td>
+                        <td><span class="badge badge-success">Selesai</span></td>
+                        <td><button class="btn-action btn-edit">👁️ Detail</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FORM TAMBAH PENJUALAN -->
+<section id="penjualan-form" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Tambah Transaksi Penjualan</h1>
+        <p>Masukkan informasi transaksi penjualan baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formPenjualan" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>No. Invoice *</label>
+                    <input type="text" id="noInvoice" class="form-control" placeholder="INV-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal *</label>
+                    <input type="date" id="tanggalPenjualan" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Pelanggan *</label>
+                    <input type="text" id="pelangganPenjualan" class="form-control" placeholder="Nama Pelanggan" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Total *</label>
+                    <input type="number" id="totalPenjualan" class="form-control" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusPenjualan" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Selesai</option>
+                        <option>Menunggu Pembayaran</option>
+                        <option>Dalam Proses</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('penjualan')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<!-- RETUR PEMBELIAN -->
+<section id="retur-pembelian" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Retur Pembelian</h1>
+        <p>Pengembalian barang kepada supplier</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Retur Pembelian</h3>
+            <button class="btn btn-primary" onclick="showPage('retur-pembelian-form')">➕ Tambah Retur</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Retur</th>
+                        <th>Tanggal</th>
+                        <th>Supplier</th>
+                        <th>Total Barang</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RPB-001</td>
+                        <td>2025-01-05</td>
+                        <td>PT Maju Bersama</td>
+                        <td>4 item</td>
+                        <td><span class="badge badge-warning">Menunggu</span></td>
+                        <td><button class="btn-action btn-edit">👁️ Detail</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FORM TAMBAH RETUR PEMBELIAN -->
+<section id="retur-pembelian-form" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Tambah Retur Pembelian</h1>
+        <p>Masukkan detail retur pembelian baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formReturPembelian" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>No. Retur *</label>
+                    <input type="text" id="noRetur" class="form-control" placeholder="RPB-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal *</label>
+                    <input type="date" id="tanggalRetur" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Supplier *</label>
+                    <input type="text" id="supplierRetur" class="form-control" placeholder="Nama Supplier" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Total Barang *</label>
+                    <input type="number" id="totalBarangRetur" class="form-control" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusRetur" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Menunggu</option>
+                        <option>Diterima</option>
+                        <option>Ditolak</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('retur-pembelian')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<!-- RETUR PENJUALAN -->
+<section id="retur-penjualan" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Retur Penjualan</h1>
+        <p>Pengembalian barang dari pelanggan</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Daftar Retur Penjualan</h3>
+            <button class="btn btn-primary" onclick="showPage('retur-penjualan-form')">➕ Tambah Retur</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Retur</th>
+                        <th>Tanggal</th>
+                        <th>Pelanggan</th>
+                        <th>Total Barang</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RPJ-001</td>
+                        <td>2025-01-10</td>
+                        <td>Budi Santoso</td>
+                        <td>2 item</td>
+                        <td><span class="badge badge-success">Selesai</span></td>
+                        <td><button class="btn-action btn-edit">👁️ Detail</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FORM TAMBAH RETUR PENJUALAN -->
+<section id="retur-penjualan-form" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Tambah Retur Penjualan</h1>
+        <p>Masukkan detail retur barang dari pelanggan</p>
+    </div>
+
+    <div class="card">
+        <form id="formReturPenjualan" class="inventory-form">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>No. Retur *</label>
+                    <input type="text" id="noReturPenjualan" class="form-control" placeholder="RPJ-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal *</label>
+                    <input type="date" id="tanggalReturPenjualan" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Pelanggan *</label>
+                    <input type="text" id="pelangganReturPenjualan" class="form-control" placeholder="Nama pelanggan" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Total Barang *</label>
+                    <input type="number" id="totalBarangReturPenjualan" class="form-control" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Status *</label>
+                    <select id="statusReturPenjualan" class="form-control" required>
+                        <option value="">Pilih Status</option>
+                        <option>Menunggu</option>
+                        <option>Selesai</option>
+                        <option>Ditolak</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">💾 Simpan</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('retur-penjualan')">❌ Batal</button>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<!-- STOK OPNAME -->
+<section id="stok-opname" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Stok Opname</h1>
+        <p>Pengecekan fisik persediaan barang</p>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Riwayat Stok Opname</h3>
+            <button class="btn btn-primary" onclick="showPage('stok-opname-form')">➕ Mulai Stok Opname</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Opname</th>
+                        <th>Tanggal</th>
+                        <th>Gudang</th>
+                        <th>Selisih</th>
+                        <th>PIC</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SO-001</td>
+                        <td>2025-01-15</td>
+                        <td>Gudang Utama</td>
+                        <td>+12 item</td>
+                        <td>Siti Nurhaliza</td>
+                        <td><button class="btn-action btn-edit">👁️ Detail</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FORM TAMBAH STOK OPNAME -->
+<section id="stok-opname-form" class="page hidden inventory-page">
+    <div class="page-header">
+        <h1>Mulai Stok Opname</h1>
+        <p>Masukkan informasi stok opname baru</p>
+    </div>
+
+    <div class="card">
+        <form id="formStokOpname" class="inventory-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>No. Opname *</label>
+                    <input type="text" id="noOpname" class="form-control" placeholder="SO-001" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Tanggal *</label>
+                    <input type="date" id="tanggalOpname" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Gudang *</label>
+                    <select id="gudangOpname" class="form-control" required>
+                        <option value="">Pilih Gudang</option>
+                        <option value="Gudang Utama">Gudang Utama</option>
+                        <option value="Gudang Cadangan">Gudang Cadangan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Petugas (PIC) *</label>
+                    <input type="text" id="picOpname" class="form-control" placeholder="Nama Petugas" required>
+                </div>
+            </div>
+
+            <h3>Daftar Barang untuk Opname</h3>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Barang</th>
+                        <th>Stok Sistem</th>
+                        <th>Stok Fisik</th>
+                        <th>Selisih</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="barangOpname">
+                    <tr>
+                        <td>
+                            <select name="barang[]" class="form-control" required>
+                                <option value="">Pilih Barang</option>
+                                <option>Barang 1</option>
+                                <option>Barang 2</option>
+                                <option>Barang 3</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="stok_sistem[]" class="form-control" value="0" readonly></td>
+                        <td><input type="number" name="stok_fisik[]" class="form-control" value="0" required></td>
+                        <td><input type="number" name="selisih[]" class="form-control" readonly></td>
+                        <td><button type="button" class="btn-action btn-delete">🗑️</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" id="addRow" class="btn btn-secondary">➕ Tambah Barang</button>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">✔ Mulai Opname</button>
+                <button type="button" class="btn btn-secondary" onclick="showPage('stok-opname')">❌ Batal</button>
+            </div>
+        </form>
+    </div>
+</section>
+
 <script>
 function showPage(page){
     document.querySelectorAll(".main-content section")
@@ -144,7 +1671,14 @@ function showPage(page){
     document.getElementById(page).style.display="block";
 }
 </script>
-
+<footer class="footer">
+    <p>© 2025 Fahrezi Luthfi | Portfolio Website</p>
+    <div class="footer-sosmed">
+        <a href="https://instagram.com/lutpee.e" target="_blank">Instagram</a>
+        <a href="mailto:fahrezillutfi1@gmail.com" target="_blank">Email</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+</footer>
 <script src="js/scrift.js"></script>
 </body>
 </html>
